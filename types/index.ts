@@ -1,18 +1,17 @@
 import { MouseEventHandler } from "react";
 
+export interface FiturProps {
+  name: string;
+}
 export interface CarProps {
-  city_mpg: number;
-  class: string;
-  combination_mpg: number;
-  cylinders: number;
-  displacement: number;
-  drive: string;
-  fuel_type: string;
-  highway_mpg: number;
-  make: string;
+  pabrikan: string;
   model: string;
-  transmission: string;
-  year: number;
+  kursi: number;
+  bagasi: number;
+  tahun: number;
+  transmisi: string;
+  harga: string;
+  fitur: string[]
 }
 
 export interface FilterProps {
@@ -65,4 +64,15 @@ export interface ShowMoreProps {
 export interface SearchManuFacturerProps {
   manufacturer: string;
   setManuFacturer: (manufacturer: string) => void;
+}
+
+export interface ButtonTagProps {
+  styles?: string;
+  title: string;
+}
+
+export interface ButtonWhatsappProps {
+  styles?: string;
+  title: string;
+  handleClick?: MouseEventHandler<HTMLButtonElement>;
 }
